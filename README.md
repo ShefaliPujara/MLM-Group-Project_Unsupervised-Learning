@@ -60,28 +60,39 @@ About Dataset: The dataset contains transactional records of imports and exports
 
 
 
-3. Project Objectives & Problem Statements
-Unsupervised Machine Learning: Clustering
+3. Executive Summary
 
-Project Objectives:
+This report summarizes the findings of a comprehensive data analysis project focused on an imports-exports dataset. The project's core objectives were to preprocess and explore the data, identify inherent patterns and groupings, and develop predictive models to understand key aspects of the import-export process. Through a systematic approach encompassing descriptive statistics, data transformation, clustering, and supervised machine learning techniques, the project successfully uncovered actionable insights and built models that provide predictive capabilities for critical business decisions. Notably, the project also delved into the relationships between categorical variables, assessed the normality of numerical variables, and carefully handled data outliers, adding depth to the overall analysis.
 
-Segmentation of the imports-exports dataset using unsupervised machine learning clustering algorithms (K-Means).
+4. Project Goals and Objectives
 
-Identification of the optimal number of clusters for the dataset based on evaluation metrics (Silhouette Score, Davies-Bouldin Score).
+The project was initiated to address the following key objectives:
 
-Characterization of the identified clusters based on the distribution of variables like Quantity, Value, Weight, Import_Export, Category, Shipping_Method, and Payment_Terms.
+Prepare the dataset for advanced analytics and machine learning.
+Effectively manage and impute missing data.
+Transform categorical data into a usable numerical format.
+Standardize and normalize numerical data, including rigorous testing for normality.
+Identify natural groupings within the transactional data.
+Assess the relationships between categorical variables using a test of homogeneity.
+Develop predictive models to understand and forecast shipping methods.
+Evaluate and compare the performance of different machine learning models.
+Generate business insights from the analysis, applicable to strategy and operations.
+
+ 5. Methodology
+
+The project followed a multi-phased methodology:
+
+Data Acquisition and Preparation: The dataset was acquired, loaded, and subjected to rigorous data cleaning and preprocessing, including missing data handling (imputation), categorical data encoding (Ordinal Encoding), and numerical data scaling (MinMaxScaler). Outliers were considered during this stage and managed via row and column removal.
+Exploratory Data Analysis (EDA): Descriptive statistics and visualizations were utilized to understand data characteristics, including central tendency, dispersion, variable relationships, and categorical distributions.
+Normality Testing: Rigorous testing was applied to the numerical variables. Tests applied were shapiro-Wilk, Kolmogorov-Smirnov, Anderson-Darling, and Jarque-Bera tests.
+Test of Homogeneity: A chi-squared test of homogeneity was implemented to test the independence of all categorical variables.
+Cluster Analysis: K-Means clustering was employed to segment transactional data based on key numerical variables (Quantity, Value, Weight). The optimal number of clusters was evaluated using silhouette and Davies-Bouldin scores.
+Supervised Learning: Supervised machine learning models, including Decision Tree, Logistic Regression, Random Forest and XGBoost, were trained to predict the 'Shipping_Method' using 'Quantity' and 'Weight' as predictors.
+Model Evaluation and Comparison: The models were rigorously evaluated using relevant metrics such as accuracy, classification reports, and confusion matrices. A comparative analysis of model performance was conducted.
+Insight Generation: Insights derived from EDA, cluster analysis, and model results were translated into actionable business recommendations.
 
 
-Problem Statements:
-
-How can the imports-exports dataset be effectively segmented into meaningful clusters using K-Means clustering?
-
-What is the most appropriate number of clusters for representing the underlying structure of the data?
-
-What are the key characteristics and distinguishing features of each identified cluster in terms of the included variables?
-
-
-Overall Observations and Findings
+6. Overall Observations and Findings
 
 Data Quality: The dataset was relatively clean, facilitating analysis.
 
@@ -104,7 +115,7 @@ Model Selection: Decision Tree might be preferred, but consider Random Forest an
 Further Improvements: Explore feature engineering, hyperparameter tuning, and alternative algorithms. """
 
 
-6. Managerial Insights and Recommendations
+7. Managerial Insights and Recommendations
 Insights:
 
 
@@ -117,7 +128,7 @@ Model Comparison: While Decision Tree showed marginally better accuracy in this 
 Feature Importance: Understanding the relative importance of different features for prediction is crucial for effective decision-making. Further analysis is needed to identify key drivers of Import/Export status.
 
 
-Recommendations:
+8. Recommendations:
 
 Leverage Customer Segmentation: Tailor business strategies to the identified customer segments, such as offering customized pricing, promotions, or logistics solutions based on their typical transaction characteristics.
 
